@@ -3,8 +3,8 @@
 describe('Galactic Age', () => {
 
   test('should have inputted Earth years', () => {
-    var galacticage = new Galacticage(1);
-    expect(galacticage.side1).toEqual(1);
+    var galacticAge = new GalacticAge(25);
+    expect(galacticAge.earthAge).toEqual(25);
 
   });
 });

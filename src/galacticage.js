@@ -1,4 +1,4 @@
-import { Galacticage } from '../src/galacticage.js/';
-export function Galacticage(earthAge) {
+import { GalacticAge } from '../src/galacticage.js/';
+export function GalacticAge(earthAge) {
   this.earthAge = earthAge;
 }
