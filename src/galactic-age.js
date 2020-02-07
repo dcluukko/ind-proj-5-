@@ -4,3 +4,7 @@ export class GalacticAge {
     this.earthAge = earthAge;
   }
 };
+
+GalacticAge.prototype.checkNumber = function () {
+
+}
