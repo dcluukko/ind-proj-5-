@@ -8,7 +8,7 @@ describe('Galactic Age', () => {
   });
 
   test('Input should be only a number character type', () => {
-    let galacticAge = new GalacticAge("nan");
+    let galacticAge = new GalacticAge(3);
     expect(galacticAge.earthAge).toEqual(3)
   })
 });
