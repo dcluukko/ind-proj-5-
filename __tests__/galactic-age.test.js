@@ -14,6 +14,6 @@ describe('Galactic Age', () => {
 
   test('Converts Earth years to Mercury years', () => {
     let galacticAge = new GalacticAge([25]);
-    expect(galacticAge.mercCalc()).toEqual([104]);
+    expect(galacticAge.mercCalc()).toEqual("104");
   })
 });
