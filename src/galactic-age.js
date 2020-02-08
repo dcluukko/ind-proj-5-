@@ -2,10 +2,10 @@
 export class GalacticAge {
   constructor(earthAge) {
     this.earthAge = earthAge;
-    this.mercuryAge = [];
-    this.venusAge = [];
-    this.marsAge = [];
-    this.jupiterAge = [];
+    this.mercurAge = mercuryAge;
+    this.allPlanetAges = [];
+
+    this.lifeExpect = 78 - earthAge;
   }
 
   checkNumber() {
@@ -21,26 +21,17 @@ export class GalacticAge {
   };
   mercCalc() {
     this.mercuryAge = (this.earthAge / .24).toFixed(0);
-    console.log(this.mercuryAge);
-    return (this.mercuryAge);
+    console.log(mercLifeExpect);
+    return (mercLifeExpect);
   }
 
-  venusCalc() {
-    this.venusAge = (this.earthAge / .62).toFixed(0);
-    console.log(this.venusAge);
-    return (this.venusAge);
-  }
+  galacticAgeCalc() {
+    //planet conversion number order : Mercury, Venus, Mars, Jupiter:
+    //                                  .24       .62  1.88    11.86
+    const planetConNum = [.24, .62, 1.88, 11.86]
+    for (let i = 0; i < this.earthAge.length; i++) {
 
-  marsCalc() {
-    this.marsAge = (this.earthAge / 1.88).toFixed(0);
-    console.log(this.marsAge);
-    return (this.marsAge);
-  }
-
-  jupiterCalc() {
-    this.jupiterAge = (this.earthAge / 11.86).toFixed(0);
-    console.log(this.jupiterAge);
-    return (this.jupiterAge);
+    }
   }
 
 };
