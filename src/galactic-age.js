@@ -2,18 +2,23 @@
 export class GalacticAge {
   constructor(earthAge) {
     this.earthAge = earthAge;
+    this.mercuryAge = [];
   }
-};
 
-GalacticAge.prototype.checkNumber = function () {
-  const values = Object.values(this);
-  for (let i = 0; i < values.length; i++) {
+  checkNumber() {
     let number = /\d+/;
-    let numberArray = values[i].match(number);
-    if (numberArray) {
-      return "success";
+    let isNum = number.test(this.earthAge);
+    if (isNum === true) {
+      return this.earthAge
     } else {
       return "error";
-    }
+    };
+
   };
+  mercCalc() {
+    this.mercuryAge = (this.earthAge / .24).toFixed(0)
+    return (this.mercuryAge);
+  }
+
 };
+
