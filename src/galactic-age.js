@@ -28,7 +28,7 @@ export class GalacticAge {
   galacticAgeCalc() {
     //planet conversion number order : Mercury, Venus, Mars, Jupiter:
     //                                  .24       .62  1.88    11.86
-    const planetConNum = [.24, .62, 1.88, 11.86]
+    const planetConNum = [.24, .62, 1.88, 11.86];
     for (let i = 0; i < this.earthAge.length; i++) {
 
     }
