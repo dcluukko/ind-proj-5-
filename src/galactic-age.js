@@ -1,11 +1,12 @@
 
 export class GalacticAge {
-  constructor(earthAge) {
+  constructor(earthAge, earthExpect) {
     this.earthAge = earthAge;
-    this.mercuryAge = [];
+    this.mercAge = [];
     this.venusAge = [];
     this.marsAge = [];
     this.jupiterAge = [];
+    this.earthExpect = earthExpect;
   }
 
   checkNumber() {
@@ -20,9 +21,8 @@ export class GalacticAge {
 
   };
   mercCalc() {
-    this.mercuryAge = (this.earthAge / .24).toFixed(0);
-    console.log(this.mercuryAge);
-    return (this.mercuryAge);
+    this.mercAge = (this.earthAge / .24).toFixed(0);
+    this.mercAge
   }
 
   venusCalc() {
@@ -41,5 +41,13 @@ export class GalacticAge {
     this.jupiterAge = (this.earthAge / 11.86).toFixed(0);
     console.log(this.jupiterAge);
     return (this.jupiterAge);
+  }
+
+  mercExpect() {
+    let mercAge = this.mercAge;
+    console.log(mercAge);
+    let mercExpect = (this.earthExpect * mercAge)
+    console.log(mercExpect);
+    return (mercExpect);
   }
 }

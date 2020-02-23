@@ -28,10 +28,11 @@ describe('Galactic Age', () => {
     let galacticAge = new GalacticAge([25]);
     expect(galacticAge.jupiterCalc()).toEqual("2");
   })
-  // test('subtracts Mercury Age from preset life expectancy', () => {
-  //   let galacticAge = new galacticAge([25])
 
-  //subtract earthAge from lifeExpect before converting to Mercury Age 
+  //Life Expectancy Calc
 
-
+  test('Calculates life expectancy on Mercury', () => {
+    let galacticAge = new GalacticAge([25]);
+    expect(galacticAge.mercExpect()).toEqual(9)
+  })
 });
