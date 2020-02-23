@@ -35,4 +35,8 @@ describe('Galactic Age', () => {
     let galacticAge = new GalacticAge([25]);
     expect(galacticAge.mercExpect()).toEqual("196")
   })
+  test('Calculates life expectancy on Venus', () => {
+    let galacticAge = new GalacticAge([25]);
+    expect(galacticAge.venusExpect()).toEqual("196")
+  })
 });

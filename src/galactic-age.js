@@ -47,4 +47,16 @@ export class GalacticAge {
     let mercExpect = (this.earthExpect / .24).toFixed(0);
     return (mercExpect);
   }
+  venusExpect() {
+    let venusExpect = (this.earthExpect / .62).toFixed(0);
+    return (venusExpect);
+  }
+  marsExpect() {
+    let marsExpect = (this.earthExpect / 1.88).toFixed(0);
+    return (marsExpect);
+  }
+  jupiterExpect() {
+    let jupiterExpect = (this.earthExpect / 11.86).toFixed(0);
+    return (jupiterExpect);
+  }
 }
