@@ -50,6 +50,6 @@ describe('Galactic Age', () => {
 
   test('Calculates all Mercury, Venus, Mars, and Jupiter ages in an array', () => {
     let galacticAge = new GalacticAge([25]);
-    expect(galacticAge.allPlanetAgeCalc()).toEqual(["104", "40", "13", "3"])
+    expect(galacticAge.allPlanetAgeCalc()).toEqual(["104", "40", "13", "2"])
   })
 });
