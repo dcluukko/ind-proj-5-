@@ -20,10 +20,12 @@ describe('Galactic Age', () => {
     expect(galacticAge.allPlanetAgeCalc()).toEqual([104, 40, 13, 2]);
   })
 
-  //Life Expectency Calculator
+  //Life Expectency Calculator and Statement
 
   test('Calculates life expectency on Mercury, Venus, Mars, and Jupiter', () => {
     let galacticAge = new GalacticAge([25]);
-    expect(galacticAge.allPlanetLifeExpCalc()).toEqual([196, 76, 69, 4]);
+    expect(galacticAge.allPlanetLifeExpCalc()).toEqual(["On planet Mercury, you have lived 196 years longer than expected. Count your blessings, my dude!", "On planet Venus, you have lived 76 years longer than expected. Count your blessings, my dude!", "On planet Mars, you have lived 60 years longer than expected. Count your blessings, my dude!", "On planet Jupiter, you have lived 4 years longer than expected. Count your blessings, my dude!"]);
   })
 });
+
+

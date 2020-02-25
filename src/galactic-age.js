@@ -27,7 +27,6 @@ export class GalacticAge {
       this.planetAge = Math.round(this.earthAge / planetFactor[i])
       this.planetAgeArray.push(this.planetAge);
     }
-    console.log(this.planetAgeArray[2]);
     return this.planetAgeArray;
   };
 
@@ -37,11 +36,14 @@ export class GalacticAge {
     const planetFactor = [.24, .62, .88, 11.86];
     for (var i = 0; i < planetNames.length; i++) {
       this.expectency = Math.round((this.earthExpect / planetFactor[i]) - this.planetAgeArray[i]);
-      console.log(this.expectency, "expectency");
-      this.planetExpectArray.push(this.expectency);
+      if (this.expectancy > 0) {
+        this.planetExpectArray.push(`On planet ${planetNames[i]}, you have ${this.expectency} years left to live`);
+      }
+      else {
+        this.expectancy *= -1;
+        this.planetExpectArray.push(`On planet ${planetNames[i]}, you have lived ${this.expectency} years longer than expected. Count your blessings, my dude!`);
+      }
     }
     return this.planetExpectArray;
   };
-
-
-};
+}
