@@ -12,44 +12,18 @@ describe('Galactic Age', () => {
     expect(galacticAge.checkNumber()).toEqual([25]);
   })
 
-  test('Converts Earth years to Mercury years', () => {
-    let galacticAge = new GalacticAge([25]);
-    expect(galacticAge.mercCalc()).toEqual("104");
-  })
-  test('Converts Earth years to Venus years', () => {
-    let galacticAge = new GalacticAge([25]);
-    expect(galacticAge.venusCalc()).toEqual("40");
-  })
-  test('Converts Earth years to Venus years', () => {
-    let galacticAge = new GalacticAge([25]);
-    expect(galacticAge.marsCalc()).toEqual("13");
-  })
-  test('Converts Earth years to Venus years', () => {
-    let galacticAge = new GalacticAge([25]);
-    expect(galacticAge.jupiterCalc()).toEqual("2");
-  })
+  // Age Calculator
 
-  // Life Expectancy Calc
-
-  test('Calculates life expectancy on Mercury', () => {
-    let galacticAge = new GalacticAge([25]);
-    expect(galacticAge.mercExpect()).toEqual("196")
-  })
-  test('Calculates life expectancy on Venus', () => {
-    let galacticAge = new GalacticAge([25]);
-    expect(galacticAge.venusExpect()).toEqual("76")
-  })
-  test('Calculates life expectancy on Venus', () => {
-    let galacticAge = new GalacticAge([25]);
-    expect(galacticAge.marsExpect()).toEqual("25")
-  })
-  test('Calculates life expectancy on Venus', () => {
-    let galacticAge = new GalacticAge([25]);
-    expect(galacticAge.jupiterExpect()).toEqual("4")
-  })
 
   test('Calculates all Mercury, Venus, Mars, and Jupiter ages in an array', () => {
     let galacticAge = new GalacticAge([25]);
-    expect(galacticAge.allPlanetAgeCalc()).toEqual(["104", "40", "13", "2"])
+    expect(galacticAge.allPlanetAgeCalc()).toEqual([104, 40, 13, 2]);
+  })
+
+  //Life Expectency Calculator
+
+  test('Calculates life expectency on Mercury, Venus, Mars, and Jupiter', () => {
+    let galacticAge = new GalacticAge([25]);
+    expect(galacticAge.allPlanetLifeExpCalc()).toEqual([196, 76, 69, 5]);
   })
 });

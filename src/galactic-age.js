@@ -3,8 +3,11 @@ export class GalacticAge {
   constructor(earthAge) {
     this.earthAge = earthAge;
     this.planetAgeArray = [];
-    this.earthExpect = 72 - earthAge;
+    this.planetExpectArray = [];
+    this.earthExpect = 72;
+    this.earthExpectDifference = this.earthExpect - this.earthAge;
     this.planetAge = [];
+    this.expectency = [];
   }
 
   checkNumber() {
@@ -21,50 +24,24 @@ export class GalacticAge {
   allPlanetAgeCalc() {
     const planetFactor = [.24, .62, 1.88, 11.86];
     for (var i = 0; i < planetFactor.length; i++) {
-      this.planetAge = (this.earthAge / planetFactor[i]).toFixed(0);
+      this.planetAge = Math.round(this.earthAge / planetFactor[i])
       this.planetAgeArray.push(this.planetAge);
     }
-    console.log(this.planetAgeArray[0]);
+    console.log(this.planetAgeArray[2]);
     return this.planetAgeArray;
   };
 
-  mercCalc() {
-    this.mercAge = (this.earthAge / .24).toFixed(0);
-    return this.mercAge
-  }
+  allPlanetLifeExpCalc() {
+    this.allPlanetAgeCalc();
+    const planetNames = ["Mercury", "Venus", "Mars", "Jupiter"];
+    const planetFactor = [.24, .62, .88, 11.86];
+    for (var i = 0; i < planetNames.length; i++) {
+      this.expectency = Math.round((this.earthExpect / planetFactor[i]) - this.planetAgeArray[i]);
+      console.log(this.expectency, "expectency");
+      this.planetExpectArray.push(this.expectency);
+    }
+    return this.planetExpectArray;
+  };
 
-  venusCalc() {
-    this.venusAge = (this.earthAge / .62).toFixed(0);
-    console.log(this.venusAge);
-    return (this.venusAge);
-  }
 
-  marsCalc() {
-    this.marsAge = (this.earthAge / 1.88).toFixed(0);
-    console.log(this.marsAge);
-    return (this.marsAge);
-  }
-
-  jupiterCalc() {
-    this.jupiterAge = (this.earthAge / 11.86).toFixed(0);
-    console.log(this.jupiterAge);
-    return (this.jupiterAge);
-  }
-
-  mercExpect() {
-    let mercExpect = (this.earthExpect / .24).toFixed(0);
-    return (mercExpect);
-  }
-  venusExpect() {
-    let venusExpect = (this.earthExpect / .62).toFixed(0);
-    return (venusExpect);
-  }
-  marsExpect() {
-    let marsExpect = (this.earthExpect / 1.88).toFixed(0);
-    return (marsExpect);
-  }
-  jupiterExpect() {
-    let jupiterExpect = (this.earthExpect / 11.86).toFixed(0);
-    return (jupiterExpect);
-  }
 };
