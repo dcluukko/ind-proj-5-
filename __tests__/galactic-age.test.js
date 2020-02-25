@@ -24,6 +24,6 @@ describe('Galactic Age', () => {
 
   test('Calculates life expectency on Mercury, Venus, Mars, and Jupiter', () => {
     let galacticAge = new GalacticAge([25]);
-    expect(galacticAge.allPlanetLifeExpCalc()).toEqual([196, 76, 69, 5]);
+    expect(galacticAge.allPlanetLifeExpCalc()).toEqual([196, 76, 69, 4]);
   })
 });
