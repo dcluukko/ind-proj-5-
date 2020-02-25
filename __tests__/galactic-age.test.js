@@ -8,8 +8,8 @@ describe('Galactic Age', () => {
   });
 
   test('Input should be only a number character type', () => {
-    let galacticAge = new GalacticAge([3]);
-    expect(galacticAge.checkNumber()).toEqual([3]);
+    let galacticAge = new GalacticAge([25]);
+    expect(galacticAge.checkNumber()).toEqual([25]);
   })
 
   test('Converts Earth years to Mercury years', () => {
@@ -29,7 +29,7 @@ describe('Galactic Age', () => {
     expect(galacticAge.jupiterCalc()).toEqual("2");
   })
 
-  //Life Expectancy Calc
+  // Life Expectancy Calc
 
   test('Calculates life expectancy on Mercury', () => {
     let galacticAge = new GalacticAge([25]);
@@ -46,5 +46,10 @@ describe('Galactic Age', () => {
   test('Calculates life expectancy on Venus', () => {
     let galacticAge = new GalacticAge([25]);
     expect(galacticAge.jupiterExpect()).toEqual("4")
+  })
+
+  test('Calculates all Mercury, Venus, Mars, and Jupiter ages in an array', () => {
+    let galacticAge = new GalacticAge([25]);
+    expect(galacticAge.allPlanetAgeCalc()).toEqual(["104", "40", "13", "3"])
   })
 });

@@ -1,25 +1,33 @@
 
 export class GalacticAge {
-  constructor(earthAge, earthExpect) {
+  constructor(earthAge) {
     this.earthAge = earthAge;
-    this.mercAge = [];
-    this.venusAge = [];
-    this.marsAge = [];
-    this.jupiterAge = [];
+    this.planetAgeArray = [];
     this.earthExpect = 72 - earthAge;
+    this.planetAge = [];
   }
 
   checkNumber() {
     let number = /\d+/;
     let isNum = number.test(this.earthAge);
     if (isNum === true) {
-      console.log(this.earthAge)
       return this.earthAge
     } else {
       return "error";
     };
 
   };
+
+  allPlanetAgeCalc() {
+    const planetFactor = [.24, .62, 1.88, 11.86];
+    for (var i = 0; i < planetFactor.length; i++) {
+      this.planetAge = (this.earthAge / planetFactor[i]).toFixed(0);
+      this.planetAgeArray.push(this.planetAge);
+    }
+    console.log(this.planetAgeArray[0]);
+    return this.planetAgeArray;
+  };
+
   mercCalc() {
     this.mercAge = (this.earthAge / .24).toFixed(0);
     return this.mercAge
@@ -59,4 +67,4 @@ export class GalacticAge {
     let jupiterExpect = (this.earthExpect / 11.86).toFixed(0);
     return (jupiterExpect);
   }
-}
+};
