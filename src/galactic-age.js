@@ -38,11 +38,11 @@ export class GalacticAge {
       this.expectency = Math.round((this.earthExpect / planetFactor[i]) - this.planetAgeArray[i]);
       if (this.expectency < 0) {
         this.expectency *= -1;
-        this.planetExpectArray.push(`On planet ${planetNames[i]}, you have ${this.expectency} years left to live`);
+        this.planetExpectArray.push(`On planet ${planetNames[i]}, you have lived ${this.expectency} years longer than expected. Count your blessings, my dude!`);
       }
       else {
         this.expectancy *= 1;
-        this.planetExpectArray.push(`On planet ${planetNames[i]}, you have lived ${this.expectency} years longer than expected. Count your blessings, my dude!`);
+        this.planetExpectArray.push(`On planet ${planetNames[i]}, you have ${this.expectency} years left to live`);
       }
     }
     return this.planetExpectArray;
