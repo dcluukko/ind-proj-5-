@@ -36,11 +36,12 @@ export class GalacticAge {
     const planetFactor = [.24, .62, .88, 11.86];
     for (var i = 0; i < planetNames.length; i++) {
       this.expectency = Math.round((this.earthExpect / planetFactor[i]) - this.planetAgeArray[i]);
-      if (this.expectancy > 0) {
+      if (this.expectency < 0) {
+        this.expectency *= -1;
         this.planetExpectArray.push(`On planet ${planetNames[i]}, you have ${this.expectency} years left to live`);
       }
       else {
-        this.expectancy *= -1;
+        this.expectancy *= 1;
         this.planetExpectArray.push(`On planet ${planetNames[i]}, you have lived ${this.expectency} years longer than expected. Count your blessings, my dude!`);
       }
     }
